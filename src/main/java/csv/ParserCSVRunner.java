@@ -17,7 +17,6 @@ public class ParserCSVRunner {
         File csvFile = new File("./employees.csv");
         CSVParser parser = CSVParser.parse(csvFile, Charset.defaultCharset(), CSVFormat.RFC4180); //parsing CSV file
         List<Data> list1 = splitCSV.parser2(parser);        //and putting it into list
-        Compare comparator = new Compare();
 
         Map<String, Double> resultMap = splitCSV.filter(list1);
         System.out.println(resultMap.entrySet());
